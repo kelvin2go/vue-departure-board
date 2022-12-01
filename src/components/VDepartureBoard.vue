@@ -22,7 +22,10 @@ const halfSizePx = computed(() => `${props.size/2}px`);
 </script>
 
 <template>
-    <div class="v-departure-board" :style="{'--sizePx': sizePx, '--halfSizePx': halfSizePx}">
+    <div class="v-departure-board" 
+        :style="
+            // @ts-ignore 
+            {'--sizePx': sizePx, '--halfSizePx': halfSizePx}">
         <template v-for="ch in strAry">
             <span class="letter" :class="[`letter-${ch}`]"></span>
         </template>
