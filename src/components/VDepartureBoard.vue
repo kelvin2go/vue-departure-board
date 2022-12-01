@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import "./DepartureBoard.scss";
+import "./VDepartureBoard.scss";
 
 interface Props {
     displayStr: string,
@@ -22,15 +22,13 @@ const halfSizePx = computed(() => `${props.size/2}px`);
 </script>
 
 <template>
-    <div class="departure-board" :style="{'--sizePx': sizePx, '--halfSizePx': halfSizePx}">
+    <div class="v-departure-board" :style="{'--sizePx': sizePx, '--halfSizePx': halfSizePx}">
         <template v-for="ch in strAry">
             <span class="letter" :class="[`letter-${ch}`]"></span>
         </template>
         
     </div>
 </template>
-
-
 
 <style lang="scss">
 .letter {

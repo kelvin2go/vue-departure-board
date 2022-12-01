@@ -4,5 +4,5 @@
 
 # Code usage
 ```JS
-    <DepartureBoard displayStr="Vite Vue" :size=100 />
+    <VDepartureBoard displayStr="Vite-Vue" :size=100 />
 ```

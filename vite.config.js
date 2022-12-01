@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.js'),
-      name: 'MyLib',
-      fileName: (format) => `departure-board.${format}.js`,
+      name: 'VDepartureBoard',
+      fileName: (format) => `v-departure-board.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],

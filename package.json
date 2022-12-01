@@ -1,15 +1,32 @@
 {
-    "name": "departure-board",
+    "name": "v-departure-board",
     "files": ["dist"],
-    "main": "./dist/departure-board.umd.js",
-    "module": "./dist/departure-board.es.js",
+    "main": "./dist/v-departure-board.umd.js",
+    "module": "./dist/v-departure-board.es.js",
     "exports": {
       ".": {
-        "import": "./dist/departure-board.es.js",
-        "require": "./dist/departure-board.umd.js"
+        "import": "./dist/v-departure-board.es.js",
+        "require": "./dist/v-departure-board.umd.js"
       }
     },
-    "version": "0.0.1",
+    "typings": "dist/types/index.d.ts",
+    "types": "dist/types/index.d.ts",
+    "private": false,
+    "author": "kelvin2go <kelvinho84@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kelvin2go/vue-departure-board.git"
+    },
+    "keywords": [
+        "vue",
+        "vue3",
+        "component",
+        "departure-board",
+        "departure",
+        "board"
+      ],
+    "version": "0.0.3",
     "scripts": {
         "dev": "vite",
         "build": "vite build",

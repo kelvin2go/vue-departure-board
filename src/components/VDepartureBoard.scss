@@ -19,7 +19,7 @@ footer {
 a {
   color: rgba(255,255,255,0.3);
 }
-.departure-board {
+.v-departure-board {
   display: inline-flex;
 }
 .letter {
@@ -72,7 +72,7 @@ a {
 }
 /* Letter animations */
 @for $i from 1 through 50 {
-  .departure-board span:nth-child(#{$i}):before {
+  .v-departure-board span:nth-child(#{$i}):before {
     animation: flip 1s 1 ease-in-out;
     animation-delay: calc($i / 4)s;
     animation-fill-mode: forwards;
@@ -80,7 +80,7 @@ a {
     transform-style:preserve-3d;
     transition-delay: calc($i / 4)s;
   }
-  .departure-board span:nth-child(#{$i}):after {
+  .v-departure-board span:nth-child(#{$i}):after {
     animation: flip 1s 1 ease-in-out;
     animation-delay: calc($i / 4)s;
     animation-fill-mode: forwards;
