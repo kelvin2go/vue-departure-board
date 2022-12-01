@@ -1,0 +1,26 @@
+{
+    "name": "departure-board",
+    "files": ["dist"],
+    "main": "./dist/departure-board.umd.js",
+    "module": "./dist/departure-board.es.js",
+    "exports": {
+      ".": {
+        "import": "./dist/departure-board.es.js",
+        "require": "./dist/departure-board.umd.js"
+      }
+    },
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "vue": "^3.2.41"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^3.2.0",
+        "sass": "^1.56.1",
+        "vite": "^3.2.3"
+    }
+}
