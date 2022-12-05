@@ -14,6 +14,7 @@
     },
     "types": "./dist/types/index.d.ts",
     "private": false,
+    "description": "This is vue3 component of flight departure board like component",
     "author": "kelvin2go <kelvinho84@gmail.com>",
     "license": "MIT",
     "repository": {
@@ -31,13 +32,12 @@
     "scripts": {
         "dev": "vite",
         "preview": "vite preview",
-        "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+        "build": "vite build",
         "preserve": "vite build",
         "serve": "vite preview --port 5050",
         "typeCheck": "vue-tsc --noEmit"
     },
     "dependencies": {
-        "v-departure-board": "v-departure-board-0.0.3.tgz",
         "vue": "^3.2.41"
     },
     "devDependencies": {
@@ -46,6 +46,6 @@
         "sass": "^1.56.1",
         "typescript": "~4.3.5",
         "vite": "^3.2.3",
-        "vue-tsc": "^0.29.5"
+        "vite-plugin-dts": "^1.7.1"
     }
 }

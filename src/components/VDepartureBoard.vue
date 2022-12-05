@@ -2,7 +2,7 @@
 import { computed } from "vue";
 import "./VDepartureBoard.scss";
 
-interface Props {
+export interface Props {
     displayStr: string,
     color?: string,
     bgColor?: string,
@@ -13,12 +13,13 @@ const props = withDefaults(defineProps<Props>(), {
     displayStr: '',
     color: 'white',
     bgColor: 'black',
-    size: 40,
-})
+    size: 40
+});
 
-const strAry = computed(() => props.displayStr?.split('').map( x => x == ' ' ? 'blank' : x == '+' ? 'add' : x.toUpperCase() ) || [] );
+const strAry = computed(() => props.displayStr?.split('').map( x => x == ' ' ? 'blank' : x.toUpperCase() ) || [] );
 const sizePx = computed(() => `${props.size}px`);
 const halfSizePx = computed(() => `${props.size/2}px`);
+
 </script>
 
 <template>
@@ -29,7 +30,6 @@ const halfSizePx = computed(() => `${props.size/2}px`);
         <template v-for="ch in strAry">
             <span class="letter" :class="[`letter-${ch}`]"></span>
         </template>
-        
     </div>
 </template>
 
