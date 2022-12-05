@@ -1,15 +1,8 @@
-<script setup lang="ts">
-import { computed } from "vue";
+<script setup>
+import { computed, defineProps, withDefaults } from "vue";
 import "./VDepartureBoard.scss";
 
-export interface Props {
-    displayStr: string,
-    color?: string,
-    bgColor?: string,
-    size?: number,
-}
-
-const props = withDefaults(defineProps<Props>(), {
+const props = defineProps({
     displayStr: '',
     color: 'white',
     bgColor: 'black',
@@ -24,9 +17,7 @@ const halfSizePx = computed(() => `${props.size/2}px`);
 
 <template>
     <div class="v-departure-board" 
-        :style="
-            // @ts-ignore 
-            {'--sizePx': sizePx, '--halfSizePx': halfSizePx}">
+        :style="{'--sizePx': sizePx, '--halfSizePx': halfSizePx}">
         <template v-for="ch in strAry">
             <span class="letter" :class="[`letter-${ch}`]"></span>
         </template>

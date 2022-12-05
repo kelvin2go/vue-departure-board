@@ -1,29 +1,27 @@
-import { defineComponent as d, computed as a, openBlock as s, createElementBlock as l, normalizeStyle as _, unref as o, Fragment as m, renderList as f, normalizeClass as z } from "vue";
-const y = /* @__PURE__ */ d({
+import { computed as s, openBlock as a, createElementBlock as o, normalizeStyle as _, unref as l, Fragment as d, renderList as m, normalizeClass as z } from "vue";
+const y = {
   __name: "VDepartureBoard",
   props: {
-    displayStr: { default: "" },
-    color: { default: "white" },
-    bgColor: { default: "black" },
-    size: { default: 40 }
+    displayStr: "",
+    color: "white",
+    bgColor: "black",
+    size: 40
   },
   setup(n) {
-    const e = n, p = a(() => {
-      var t;
-      return ((t = e.displayStr) == null ? void 0 : t.split("").map((r) => r == " " ? "blank" : r.toUpperCase())) || [];
-    }), u = a(() => `${e.size}px`), c = a(() => `${e.size / 2}px`);
-    return (t, r) => (s(), l("div", {
+    const e = n, p = s(() => {
+      var r;
+      return ((r = e.displayStr) == null ? void 0 : r.split("").map((t) => t == " " ? "blank" : t.toUpperCase())) || [];
+    }), c = s(() => `${e.size}px`), i = s(() => `${e.size / 2}px`);
+    return (r, t) => (a(), o("div", {
       class: "v-departure-board",
-      style: _(
-        { "--sizePx": o(u), "--halfSizePx": o(c) }
-      )
+      style: _({ "--sizePx": l(c), "--halfSizePx": l(i) })
     }, [
-      (s(!0), l(m, null, f(o(p), (i) => (s(), l("span", {
-        class: z(["letter", [`letter-${i}`]])
+      (a(!0), o(d, null, m(l(p), (u) => (a(), o("span", {
+        class: z(["letter", [`letter-${u}`]])
       }, null, 2))), 256))
     ], 4));
   }
-});
+};
 export {
   y as VDepartureBoard
 };
